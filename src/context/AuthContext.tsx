@@ -6,8 +6,17 @@ import config from '../config';
 const API_URL = `${config.apiUrl}/auth`;
 
 // Configure axios defaults for CORS
-axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = false; // Change to false since we're not using cookies
 axios.defaults.headers.common['Content-Type'] = 'application/json';
+
+// Create axios instance with proper configuration
+const axiosInstance = axios.create({
+  baseURL: config.apiUrl,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  timeout: 15000, // 15 seconds
+});
 
 // Types
 interface User {
@@ -55,16 +64,12 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   useEffect(() => {
     const loadUser = async () => {
       if (token) {
-        setAuthToken(token);
         try {
           console.log('Loading user with token');
-          const res = await axios.get(`${API_URL}/me`, {
+          const res = await axiosInstance.get('/auth/me', {
             headers: {
-              'Content-Type': 'application/json',
               'Authorization': `Bearer ${token}`
-            },
-            withCredentials: true,
-            timeout: 10000 // 10 second timeout
+            }
           });
           
           if (res.data && res.data.success) {
@@ -103,9 +108,9 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   // Set token in axios headers
   const setAuthToken = (token: string) => {
     if (token) {
-      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+      axiosInstance.defaults.headers.common['Authorization'] = `Bearer ${token}`;
     } else {
-      delete axios.defaults.headers.common['Authorization'];
+      delete axiosInstance.defaults.headers.common['Authorization'];
     }
   };
 
@@ -120,16 +125,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       setLoading(true);
       setError(null);
       
-      const res = await axios.post(`${API_URL}/register`, 
-        { name, email, password, phone },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          withCredentials: true,
-          timeout: 10000 // 10 second timeout
-        }
-      );
+      const res = await axiosInstance.post('/auth/register', { name, email, password, phone });
       
       localStorage.setItem('token', res.data.token);
       setToken(res.data.token);
@@ -165,16 +161,12 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       setError(null);
       console.log('Login attempt with:', { email });
       
-      const res = await axios.post(`${API_URL}/login`, 
-        { email, password },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          withCredentials: true,
-          timeout: 10000 // 10 second timeout
+      // Use the axios instance without withCredentials
+      const res = await axiosInstance.post('/auth/login', { email, password }, {
+        headers: {
+          'Content-Type': 'application/json',
         }
-      );
+      });
       
       console.log('Login response:', res.data);
       
@@ -220,7 +212,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     setUser(null);
     setIsAuthenticated(false);
     setError(null);
-    delete axios.defaults.headers.common['Authorization'];
+    delete axiosInstance.defaults.headers.common['Authorization'];
   };
 
   // Clear error
