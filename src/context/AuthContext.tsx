@@ -14,6 +14,7 @@ const axiosInstance = axios.create({
   baseURL: config.apiUrl,
   headers: {
     'Content-Type': 'application/json',
+    'X-Requested-With': 'XMLHttpRequest', // Required for CORS-anywhere
   },
   timeout: 15000, // 15 seconds
 });

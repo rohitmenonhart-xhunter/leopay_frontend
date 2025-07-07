@@ -15,6 +15,10 @@ const isProduction = import.meta.env.PROD;
 const getApiUrl = (): string => {
   // Always prioritize environment variable if it exists
   if (import.meta.env.VITE_API_URL) {
+    // In production, use a CORS proxy to bypass CORS issues
+    if (isProduction) {
+      return `https://cors-anywhere.herokuapp.com/${import.meta.env.VITE_API_URL}`;
+    }
     return import.meta.env.VITE_API_URL;
   }
   
@@ -23,8 +27,8 @@ const getApiUrl = (): string => {
     return 'http://localhost:5001/api';
   }
   
-  // For production - use the deployed Render backend
-  return 'https://leopay-backend.onrender.com/api';
+  // For production with CORS proxy
+  return 'https://cors-anywhere.herokuapp.com/https://leopay-backend.onrender.com/api';
 };
 
 const config: Config = {
