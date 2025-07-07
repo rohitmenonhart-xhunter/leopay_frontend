@@ -1,0 +1,204 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Which of these is the most important first step in becoming a great salesperson?",
+      "options": [
+        "Start designing websites",
+        "Build confidence and understand your offer",
+        "Make a business card",
+        "Offer discounts first"
+      ],
+      "answer": "Build confidence and understand your offer"
+    },
+    {
+      "id": "q2",
+      "question": "True or False: Listening is more important than talking when closing a sale.",
+      "options": ["True", "False"],
+      "answer": "True"
+    },
+    {
+      "id": "q3",
+      "question": "What does \"knowing your client's pain point\" help with?",
+      "options": [
+        "Making better websites",
+        "Deciding the domain name",
+        "Pitching your service as a solution",
+        "Pricing lower"
+      ],
+      "answer": "Pitching your service as a solution"
+    },
+    {
+      "id": "q4",
+      "question": "Which of these builds trust fastest with a client?",
+      "options": [
+        "A personal story",
+        "A relevant success story/case study",
+        "A fancy proposal",
+        "Mentioning your CEO"
+      ],
+      "answer": "A relevant success story/case study"
+    },
+    {
+      "id": "q5",
+      "question": "What is the right mindset when entering a sales conversation?",
+      "options": [
+        "Just close the deal",
+        "Solve the client's problem",
+        "Talk about your skills",
+        "Try to lower your price"
+      ],
+      "answer": "Solve the client's problem"
+    },
+    {
+      "id": "q6",
+      "question": "What is the best type of business to approach first for website services?",
+      "options": [
+        "Big corporations",
+        "Local businesses without a proper website",
+        "Startups with existing websites",
+        "Freelancers"
+      ],
+      "answer": "Local businesses without a proper website"
+    },
+    {
+      "id": "q7",
+      "question": "True or False: Cold messaging 50 people a day guarantees success.",
+      "options": ["True", "False"],
+      "answer": "False"
+    },
+    {
+      "id": "q8",
+      "question": "What makes your pitch stand out in a cold message?",
+      "options": [
+        "Using formal English",
+        "Personalizing the message to their business",
+        "Using emojis",
+        "Copying someone else's template"
+      ],
+      "answer": "Personalizing the message to their business"
+    },
+    {
+      "id": "q9",
+      "question": "What should you never say in your first pitch message?",
+      "options": [
+        "I'm just getting started",
+        "I can help you grow",
+        "Your business deserves more visibility",
+        "I specialize in local business websites"
+      ],
+      "answer": "I'm just getting started"
+    },
+    {
+      "id": "q10",
+      "question": "If a business ignores your first message, what should you do next?",
+      "options": [
+        "Follow up politely after 2–3 days",
+        "Send an aggressive message",
+        "Block them",
+        "Ask them why they ignored you"
+      ],
+      "answer": "Follow up politely after 2–3 days"
+    },
+    {
+      "id": "q11",
+      "question": "Which of these is usually NOT a concern for local business owners?",
+      "options": [
+        "Cost",
+        "How many pages your portfolio has",
+        "Results",
+        "Simplicity"
+      ],
+      "answer": "How many pages your portfolio has"
+    },
+    {
+      "id": "q12",
+      "question": "Why is it important to show the business how a website benefits them?",
+      "options": [
+        "To upsell features",
+        "To link the website to their revenue or customer base",
+        "To show your skills",
+        "To avoid questions"
+      ],
+      "answer": "To link the website to their revenue or customer base"
+    },
+    {
+      "id": "q13",
+      "question": "Which feature is most appealing to a local business client?",
+      "options": [
+        "Animations",
+        "Contact form with WhatsApp integration",
+        "Dark mode",
+        "A blog"
+      ],
+      "answer": "Contact form with WhatsApp integration"
+    },
+    {
+      "id": "q14",
+      "question": "True or False: You should always start with free work to gain trust.",
+      "options": ["True", "False"],
+      "answer": "False"
+    },
+    {
+      "id": "q15",
+      "question": "What's the best way to prove credibility to a local business?",
+      "options": [
+        "Talk a lot about your team",
+        "Offer a refund",
+        "Show a similar business you helped before",
+        "Show your college certificate"
+      ],
+      "answer": "Show a similar business you helped before"
+    },
+    {
+      "id": "q16",
+      "question": "If a local business says \"I already get customers without a website,\" your best response is:",
+      "options": [
+        "That's great! You don't need me.",
+        "Even better — a website can double that without more effort.",
+        "You're missing out.",
+        "Google is more powerful than you think."
+      ],
+      "answer": "Even better — a website can double that without more effort."
+    },
+    {
+      "id": "q17",
+      "question": "What should your tone be when pitching to someone older than you (e.g., 40+ business owner)?",
+      "options": [
+        "Casual and modern",
+        "Respectful, confident, and clear",
+        "Playful and informal",
+        "Arrogant and bold"
+      ],
+      "answer": "Respectful, confident, and clear"
+    },
+    {
+      "id": "q18",
+      "question": "Which of these increases your chances of closing a deal?",
+      "options": [
+        "Quoting the lowest price",
+        "Explaining how your website solves a specific problem",
+        "Talking about yourself",
+        "Adding lots of tech jargon"
+      ],
+      "answer": "Explaining how your website solves a specific problem"
+    },
+    {
+      "id": "q19",
+      "question": "A Hunter's success is measured by:",
+      "options": [
+        "How many websites they build",
+        "How many quality clients they bring in",
+        "How many people they text",
+        "How long they've been on the platform"
+      ],
+      "answer": "How many quality clients they bring in"
+    },
+    {
+      "id": "q20",
+      "question": "True or False: Having a script or checklist for your client call improves your chances of success.",
+      "options": ["True", "False"],
+      "answer": "True"
+    }
+  ]
+} 
