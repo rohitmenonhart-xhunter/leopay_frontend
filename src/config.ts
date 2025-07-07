@@ -13,12 +13,17 @@ const isProduction = import.meta.env.PROD;
 
 // Determine API URL based on environment
 const getApiUrl = (): string => {
-  // For local development
+  // Always prioritize environment variable if it exists
+  if (import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL;
+  }
+  
+  // Fallbacks if environment variable is not set
   if (!isProduction) {
     return 'http://localhost:5001/api';
   }
   
-  // For production - always use the deployed Render backend
+  // For production - use the deployed Render backend
   return 'https://leopay-backend.onrender.com/api';
 };
 
