@@ -26,7 +26,7 @@ const getApiUrl = (): string => {
 
 const config: Config = {
   apiUrl: getApiUrl(),
-  appName: 'EarnMockello',
+  appName: 'LeoPay',
   isProduction
 };
 

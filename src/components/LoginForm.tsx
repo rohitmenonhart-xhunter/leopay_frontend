@@ -45,22 +45,22 @@ const LoginForm: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-md p-8 bg-white rounded-3xl shadow-lg">
+    <div className="w-full max-w-md p-8 bg-[#282c34] rounded-3xl shadow-lg border border-gray-700">
       <h2 className="text-3xl font-bold mb-6 text-center">
-        <span className="bg-gradient-to-r from-[#0a5c36] to-[#1c8a4e] bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-[#C19345] to-[#dbb36b] bg-clip-text text-transparent">
           Login to Your Account
         </span>
       </h2>
       
       {showError && (
-        <div className="mb-4 p-3 bg-red-100 text-red-700 rounded-xl text-center">
+        <div className="mb-4 p-3 bg-red-900/30 text-red-300 rounded-xl text-center border border-red-800">
           {error}
         </div>
       )}
       
       <form onSubmit={handleSubmit}>
         <div className="mb-6">
-          <label htmlFor="email" className="block text-[#2a7d4f] mb-2 font-medium">
+          <label htmlFor="email" className="block text-gray-300 mb-2 font-medium">
             Email Address
           </label>
           <input
@@ -68,14 +68,14 @@ const LoginForm: React.FC = () => {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-3 rounded-xl border border-[#e8f0e8] focus:outline-none focus:ring-2 focus:ring-[#0a5c36]/50"
+            className="w-full px-4 py-3 rounded-xl bg-[#21242b] border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-[#C19345]/50"
             placeholder="Enter your email"
             required
           />
         </div>
         
         <div className="mb-6">
-          <label htmlFor="password" className="block text-[#2a7d4f] mb-2 font-medium">
+          <label htmlFor="password" className="block text-gray-300 mb-2 font-medium">
             Password
           </label>
           <input
@@ -83,7 +83,7 @@ const LoginForm: React.FC = () => {
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full px-4 py-3 rounded-xl border border-[#e8f0e8] focus:outline-none focus:ring-2 focus:ring-[#0a5c36]/50"
+            className="w-full px-4 py-3 rounded-xl bg-[#21242b] border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-[#C19345]/50"
             placeholder="Enter your password"
             required
           />
@@ -94,28 +94,28 @@ const LoginForm: React.FC = () => {
             <input
               type="checkbox"
               id="remember"
-              className="w-4 h-4 text-[#0a5c36] border-[#e8f0e8] rounded focus:ring-[#0a5c36]/50"
+              className="w-4 h-4 text-[#C19345] bg-[#21242b] border-gray-700 rounded focus:ring-[#C19345]/50"
             />
-            <label htmlFor="remember" className="ml-2 text-[#2a7d4f]">
+            <label htmlFor="remember" className="ml-2 text-gray-300">
               Remember me
             </label>
           </div>
-          <a href="#" className="text-[#0a5c36] hover:underline">
+          <a href="#" className="text-[#C19345] hover:underline">
             Forgot password?
           </a>
         </div>
         
         <button
           type="submit"
-          className="w-full bg-gradient-to-r from-[#0a5c36] to-[#1c8a4e] text-white py-3 rounded-xl font-medium hover:from-[#084a2b] hover:to-[#1a7a46] transition-all duration-300 shadow-md"
+          className="w-full bg-gradient-to-r from-[#C19345] to-[#dbb36b] text-white py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 shadow-md"
         >
           Login
         </button>
         
         <div className="mt-6 text-center">
-          <p className="text-[#2a7d4f]">
+          <p className="text-gray-300">
             Don't have an account?{' '}
-            <a href="/register" className="text-[#0a5c36] font-medium hover:underline">
+            <a href="/register" className="text-[#C19345] font-medium hover:underline">
               Register Now
             </a>
           </p>
